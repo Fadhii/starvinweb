@@ -20,7 +20,7 @@
 }
 
 .button:hover{
-    background-color: brown;
+    background-color: black;
     color: white;
 }
 
@@ -34,7 +34,6 @@
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-
 }
 
 .title{

@@ -9,12 +9,13 @@ body {
   
   .bdy {
     position: absolute;
-    top: -20px;
-    left: -20px;
-    right: -40px;
-    bottom: -40px;
-    width: auto;
-    height: auto;
+    width: 75%;
+    margin-left: auto;
+
+
+    right: 0px;
+
+
     background-image: url(https://www.riveroaksestates.org/wp-content/uploads/2014/08/Wooden-background-texture-pattern-images-for-website-HD-template-PSD-free-download.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -181,5 +182,10 @@ body {
   .card-button {
     text-align: right;
     margin-left: auto;
+  }
+
+  .menu-buttons{
+    background-color: black;
+
   }
   

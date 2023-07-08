@@ -1,0 +1,80 @@
+
+
+.brand {
+  font-size: 3.3vw;
+  text-decoration: none;
+  color: white;
+  font-family: 'Carter One', cursive;
+  margin-top: 5rem;
+}
+
+.copyright{
+  color: white;
+  margin-top: 9%;
+}
+
+.list-items{
+  list-style: none;
+}
+
+.list-items :hover{
+  background-color: #E48900;
+}
+
+
+
+.img-div {
+  background-image: url("../images/image1.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 25%;
+  z-index: -2;
+  position: fixed;
+  background-repeat: no-repeat;
+  
+}
+
+.nav-links a{
+  font-size: 1.5rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  font-family: 'Overpass', sans-serif;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+
+.nav-links{
+  margin-top: 10%;
+}
+
+.sidenav {
+  height: 100%;
+  width: 25%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: 0.5s ease;
+  overflow-x: hidden;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 100%;
+}
+
+.wrap {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  background: #542A00;
+  z-index: -1;
+  opacity: 60%;
+  
+}
+
+
+
+

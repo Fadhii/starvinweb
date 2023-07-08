@@ -1,0 +1,72 @@
+.buttons{
+    
+    margin-left: 18rem;
+    margin-top: 4rem;
+    display: flex;
+    
+}
+
+.button{
+    width: 17rem;
+    color: white;
+    background-color: #F97B22;
+    height: 3rem;
+    border-radius: 12px;
+    border-width: 0;
+    margin-left: 2rem;
+    font-size: 1.2rem;
+    font-family: 'Comfortaa', cursive;
+    transition: all 0.3s ease;
+}
+
+.button:hover{
+    background-color: brown;
+    color: white;
+}
+
+.main-div{
+    width: 75%;
+    display: flex;
+    background-image: url("../images/homeBg.jpg");
+    margin-left: auto;
+    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.title{
+    font-size: 4rem;
+    margin-top:14rem;
+    margin-left: 20rem;
+    color: #3B1B0E;
+    font-family: 'Comfortaa', cursive;
+}
+
+.sub-title{
+    margin-left: 20.4rem;
+    color: #3B1B0E;
+    font-family: 'Comfortaa', cursive;
+}
+
+.css-button-fully-rounded--sky {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 20px;
+    border: 2px solid #4433ff;
+    background: #4433ff;
+  }
+  .css-button-fully-rounded--sky:hover {
+    background: #fff;
+    color: #4433ff
+  }

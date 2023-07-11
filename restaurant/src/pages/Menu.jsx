@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import "../css/Menu.css";
+import { FaSearch } from "react-icons/fa";
+
+
 
 const Menu = () => {
   const menu = [
@@ -29,7 +32,7 @@ const Menu = () => {
       id: 4,
       title: "Butter Chicken",
       image:
-        "https://www.simplyrecipes.com/thmb/-QzmQynep4nIQ3tncO0v3_xpPd0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__01__Butter-Chicken-LEAD-2-6ca76f24bbe74114a09958073cb9c76f.jpg",
+        "https://masalaandchai.com/wp-content/uploads/2022/03/Butter-Chicken-360x360.jpg",
       price: "Rs.200",
     },
     {
@@ -90,6 +93,7 @@ const Menu = () => {
   ];
 
   const [index, setIndex] = useState(0);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const handlePrev = () => {
     setIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 6 : 0));
@@ -101,12 +105,42 @@ const Menu = () => {
     );
   };
 
+  const addToCart = (product) => {
+    setCart((prevCart) => [...prevCart, product]);
+  };
+
+  const [cart, setCart] = useState([]);
+
+  const calculateTotalPrice = () => {
+    let total = 0;
+    for (const item of cart) {
+      const price = parseFloat(item.price.substring(3)); // Remove "Rs." and convert to number
+      total += price;
+    }
+    return total;
+  };
+
+  const filteredMenu = menu.filter((item) =>
+    item.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
-    <div class="bdy">
+    <div className="bdy">
       <div style={{ margin: "50px" }}>
         <Container>
+        <div className="search-bar">
+  <input
+    type="text"
+    value={searchTerm}
+    onChange={(e) => setSearchTerm(e.target.value)}
+    placeholder="Search by title"/>
+    <FaSearch className="search-icon" />
+  
+  
+</div>
+
           <Row>
-            {menu.slice(index, index + 6).map((e) => (
+            {filteredMenu.slice(index, index + 6).map((e) => (
               <Col key={e.id}>
                 <Card style={{ width: "18rem" }}>
                   <Card.Img
@@ -117,7 +151,9 @@ const Menu = () => {
                   <Card.Body>
                     <Card.Title>{e.title}</Card.Title>
                     <Card.Text>{e.price}</Card.Text>
-                    <Button variant="danger">Order</Button>
+                    <Button variant="danger" onClick={() => addToCart(e)}>
+                      Order
+                    </Button>
                   </Card.Body>
                 </Card>
               </Col>
@@ -135,10 +171,25 @@ const Menu = () => {
             <Button
               variant="secondary"
               onClick={handleNext}
-              disabled={index >= menu.length - 6}
+              disabled={index >= filteredMenu.length - 6}
             >
               Next
             </Button>
+          </div>
+
+          <h2>Cart:</h2>
+          <div className="cart">
+            <ul>
+              {cart.map((item) => (
+                <li key={item.id} className="cart-item">
+                  {item.title}: {item.price}
+                </li>
+              ))}
+            </ul>
+            <div className="total-price">
+              Total Price: Rs. {calculateTotalPrice()}
+            </div>
+            <Button variant="danger">Checkout</Button>
           </div>
         </Container>
       </div>

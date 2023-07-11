@@ -10,6 +10,7 @@ import Reservation from "./pages/Reservation";
 import Contact from "./pages/Contact";
 import Welcome from "./pages/Welcome";
 
+
 export default function App() {
   return (
     <>
@@ -23,6 +24,8 @@ export default function App() {
         <Route path="/reservation" element={<Reservation/>}/>
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/welcome" element={<Welcome/>}/>
+        
+
         
       </Routes>
 

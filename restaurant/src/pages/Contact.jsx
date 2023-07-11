@@ -2,6 +2,7 @@ import React from 'react';
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 import '../css/Contact.css';
 
+
 function Contact() {
 
   const openInNewTab = (url) => {

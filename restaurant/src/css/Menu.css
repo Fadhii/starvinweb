@@ -188,4 +188,61 @@ body {
     background-color: black;
 
   }
+
+  
+
+  .cart {
+    border: 1px solid #ccc;
+    color: #f7f7f7;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  
+  .cart-item {
+    color: #f7f7f7;
+    margin-bottom: 5px;
+  }
+  
+  .total-price {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .search-bar {
+    position:relative;
+    display:flex;
+    align-items: center;
+  }
+  
+  .search-bar input {
+    padding: 8px 10px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    font-size: 16px;
+  }
+  
+  .search-bar input::placeholder {
+    color: #999;
+  }
+  
+  .search-bar i.fa-search {
+    position: absolute;
+    right: 10px;
+    color: #999;
+    pointer-events: none;
+  }
+
+  
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #777;
+    cursor: pointer;
+  }
+  
+  /* Add additional styles as needed */
   

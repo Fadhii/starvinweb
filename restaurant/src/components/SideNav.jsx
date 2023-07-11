@@ -5,7 +5,6 @@ import { NavbarData } from "./NavbarData";
 
 export default function SideNav() {
 
-  const currentRoute = useLocation();
 
   return (
     <>
@@ -15,7 +14,7 @@ export default function SideNav() {
       <div className="wrap">
       </div>
       <div className="sidenav">
-      <a href="" className="brand">Star'vin</a>
+      <a href="/" className="brand">Star'vin</a>
         <div className="nav-links">
         {NavbarData.map((item, index) => {
           return (

@@ -1,37 +1,59 @@
 import React, { useState } from 'react';
 import '../css/Signup.css'; // Import the CSS file for the restaurant-themed styles
+import {Link, useNavigate} from 'react-router-dom'
+import axios from 'axios'
+
 
 const Signup = () => {
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLogin = (e) => {
+  const history = useNavigate();
+
+  async function submit(e){
     e.preventDefault();
-    // Perform login authentication here, e.g., sending data to a server.
-    // For simplicity, we'll just display a message for successful login.
-    alert('Sign up successful!');
-  };
+
+    try {
+      await axios.post("http://localhost:4578/signup",{
+        email,password
+      })
+      .then(res=>{
+        if(res.data==="exist"){
+          alert("User already exists");
+        }
+        else if(res.data==="notexist"){
+          history("/home", {state:{id:email}});
+        }
+      })
+      .catch(e=>{
+        alert("Wrong details");
+        console.log(e);
+      })
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   return (
     <div>
-      <div class="body"></div>
-      <div class="grad"></div>
+      <div class="body2"></div>
       <div class="header">
         <div>
-          Star'<span>Vin</span>
+          Sign Up
         </div>
       </div>
       <br />
       <div class="login">
-        <input type="text" placeholder="Email" name="email"/>
-        <br /><br></br>
-        <input type="text" placeholder="username" name="user" />
-        <br />
-        <input type="password" placeholder="password" name="password" />
-        <br />
-        <input type="password" placeholder="confirm password" name="repeatpassword" />
-        <br />
-        <input type="button" value="Sign up" />
+      <form action="POST">
+          <input type="email" onChange={(e) => {setEmail(e.target.value)}} placeholder="email" name="" />
+          <br />
+          <input type="password" onChange={(e) => {setPassword(e.target.value)}} placeholder="password" name="" />
+          <br />
+          <input type="button" onClick={submit} value="Sign Up"/>
+          <div class="signup-link">
+           Already have an account? <Link to="/login">Login</Link>
+          </div>
+        </form>
         
       </div>
     </div>

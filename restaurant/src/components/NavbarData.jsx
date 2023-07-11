@@ -22,10 +22,6 @@ export const NavbarData = [
         path: '/reservation',
     },
     {
-        title: 'GALLERY',
-        path: '/gallery',
-    },
-    {
         title: 'LOGIN',
         path: '/login',
     },

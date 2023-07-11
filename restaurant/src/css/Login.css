@@ -10,7 +10,7 @@ body {
   font-size: 12px;
 }
 
-.main-div3 {
+.main-div6 {
   position: absolute;
   width: 75%;
   margin-left: auto;
@@ -36,7 +36,7 @@ body {
   z-index: 2;
 }
 
-.login input[type='text'] {
+.login input[type='email'] {
   width: 250px;
   height: 30px;
   background: transparent;

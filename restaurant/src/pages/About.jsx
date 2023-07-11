@@ -19,7 +19,7 @@ function About() {
         <div className="about-content">
           <h2>About Star'vin Restaurant</h2>
           <p>
-            Star'vin Restaurant is a renowned eatery located in the heart of Kerala, India. We take pride in serving delicious and authentic Indian cuisine that satisfies your taste buds. Our team of experienced chefs prepares each dish with utmost care, using fresh and high-quality ingredients.
+            Star'vin Restaurant is a renowned eatery located in Valanchery, Kerala, India. We take pride in serving delicious and authentic Indian cuisine that satisfies your taste buds. Our team of experienced chefs prepares each dish with utmost care, using fresh and high-quality ingredients.
           </p>
           <p>
             At Star'vin, we believe in providing a delightful dining experience to our customers. Our cozy and welcoming ambiance creates the perfect setting for enjoying a scrumptious meal with family and friends. Whether you're craving traditional Indian biryanis, flavorful curries, or mouthwatering tandoori delicacies, we have a wide range of options to satisfy every palate.

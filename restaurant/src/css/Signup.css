@@ -10,14 +10,13 @@ body {
   font-size: 12px;
 }
 
-.body {
+.body2 {
   position: absolute;
-  top: -20px;
-  left: -20px;
-  right: -40px;
-  bottom: -40px;
-  width: auto;
-  height: auto;
+  width: 75%;
+  margin-left: auto;
+  right: 0px;
+
+  height: 100vh;
   background-image: url(https://img.freepik.com/free-photo/wooden-board-empty-table-top-blurred-background_1253-1584.jpg?w=740&t=st=1688463900~exp=1688464500~hmac=850eccc93198630ef5ca72fb51e6932754f27ca4727e1d8975b0a08f84241389);
   background-size: cover;
   background-repeat: no-repeat;
@@ -25,24 +24,6 @@ body {
   z-index: 0;
 }
 
-.grad {
-  position: absolute;
-  top: -20px;
-  left: -20px;
-  right: -40px;
-  bottom: -40px;
-  width: auto;
-  height: auto;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    color-stop(0%, rgba(0, 0, 0, 0)),
-    color-stop(100%, rgba(0, 0, 0, 0.65))
-  ); /* Chrome,Safari4+ */
-  z-index: 1;
-  opacity: 0.7;
-}
 
 .header {
   position: absolute;

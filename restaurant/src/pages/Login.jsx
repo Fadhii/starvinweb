@@ -7,19 +7,19 @@ const Login = () => {
 
   const history = useNavigate();
 
-  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [userName, setUserName] = useState('');
 
   async function submit(e){
     e.preventDefault();
 
     try {
       await axios.post("http://localhost:4578/login",{
-        email,password
+        userName,password
       })
       .then(res=>{
         if(res.data==="exist"){
-          history("/welcome", {state:{id:email}});
+          history("/welcome", {state:{id:userName}});
         }
         else if(res.data==="notexist"){
           alert("User does not exist");
@@ -47,7 +47,7 @@ const Login = () => {
       <br />
       <div class="login">
         <form action="POST">
-          <input type="email" onChange={(e) => {setEmail(e.target.value)}} placeholder="email"/>
+          <input type="text" onChange={(e) => {setUserName(e.target.value)}} placeholder="username"/>
           <br />
           <input type="password" onChange={(e) => {setPassword(e.target.value)}} placeholder="password" />
           <br />
@@ -62,3 +62,4 @@ const Login = () => {
 };
 
 export default Login;
+

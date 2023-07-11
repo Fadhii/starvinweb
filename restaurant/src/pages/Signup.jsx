@@ -7,6 +7,7 @@ import axios from 'axios'
 const Signup = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [userName, setUserName] = useState('');
 
   const history = useNavigate();
 
@@ -15,14 +16,14 @@ const Signup = () => {
 
     try {
       await axios.post("http://localhost:4578/signup",{
-        email,password
+        email,password,userName
       })
       .then(res=>{
         if(res.data==="exist"){
           alert("User already exists");
         }
         else if(res.data==="notexist"){
-          history("/home", {state:{id:email}});
+          history("/welcome", {state:{id:userName}});
         }
       })
       .catch(e=>{
@@ -47,8 +48,10 @@ const Signup = () => {
       <form action="POST">
           <input type="email" onChange={(e) => {setEmail(e.target.value)}} placeholder="email" name="" />
           <br />
-          <input type="password" onChange={(e) => {setPassword(e.target.value)}} placeholder="password" name="" />
+          <input type="text" onChange={(e) => {setUserName(e.target.value)}} placeholder="username" name="" />
           <br />
+          <input type="password" onChange={(e) => {setPassword(e.target.value)}} placeholder="password" name="" />
+          <br/>
           <input type="button" onClick={submit} value="Sign Up"/>
           <div class="signup-link">
            Already have an account? <Link to="/login">Login</Link>

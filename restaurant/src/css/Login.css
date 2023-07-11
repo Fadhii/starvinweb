@@ -18,7 +18,7 @@ body {
 
   height: 100vh;
   margin-left: auto;
-  background-image: url(https://img.freepik.com/free-photo/wooden-board-empty-table-top-blurred-background_1253-1584.jpg?w=740&t=st=1688463900~exp=1688464500~hmac=850eccc93198630ef5ca72fb51e6932754f27ca4727e1d8975b0a08f84241389);
+  background-image: url('../images/login1.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -34,6 +34,7 @@ body {
   width: 350px;
   padding: 10px;
   z-index: 2;
+  color: black;
 }
 
 .login input[type='email'] {

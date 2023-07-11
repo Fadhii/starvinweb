@@ -3,35 +3,38 @@ import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 import '../css/Contact.css';
 
 function Contact() {
+
+  const openInNewTab = (url) => {
+    window.open(url,"_blank", "noreferrer");
+  };
+
   return (
     <div className="contact-container">
-      <h2>Contact Us</h2>
-      <p>
+      <h1 className='title3'>Contact Us</h1>
+      <h1 className='sub-title3'>
         We'd love to hear from you! Feel free to reach out to us for any inquiries, reservations, or feedback.
-      </p>
+      </h1>
       <div className="contact-info">
         <div className="contact-item">
-          <a
-            href="https://goo.gl/maps/MUf3aNs3gJnySY6t8"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="contact-button"
-          >
-            <FaMapMarkerAlt className="contact-icon" />
+        
+          <button className='button2' onClick={() => openInNewTab("https://goo.gl/maps/MUf3aNs3gJnySY6t8")}>
+          <FaMapMarkerAlt className="contact-icon" /> 
             Star'vin, Valanchery, Kerala
-          </a>
+          </button>
         </div>
         <div className="contact-item">
-          <a href="tel:+911234567890" className="contact-button">
-            <FaPhoneAlt className="contact-icon" />
+          
+          <button className='button2' onClick={() => openInNewTab("tel:+911234567890")}>
+          <FaPhoneAlt className="contact-icon" /> 
             +91 1234567890
-          </a>
+          </button>
         </div>
         <div className="contact-item">
-          <a href="mailto:info@starvinrestaurant.com" className="contact-button">
-            <FaEnvelope className="contact-icon" />
+          
+          <button className='button2' onClick={() => openInNewTab("mailto:info@starvinrestaurant.com")}>
+          <FaEnvelope className="contact-icon" /> 
             Email Us
-          </a>
+          </button>
         </div>
       </div>
     </div>

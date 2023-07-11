@@ -1,12 +1,12 @@
-.buttons{
+.buttons7{
     
-    margin-left: 18rem;
+    margin-left: 15rem;
     margin-top: 4rem;
     display: flex;
     
 }
 
-.button{
+.button7{
     width: 19rem;
     color: white;
     background-color: #F97B22;
@@ -19,12 +19,12 @@
     transition: all 0.3s ease;
 }
 
-.button:hover{
+.button7:hover{
     background-color: black;
     color: white;
 }
 
-.main-div{
+.main-div7{
     width: 75%;
     display: flex;
     background-image: url("../images/homeBg.jpg");
@@ -36,16 +36,17 @@
     flex-direction: column;
 }
 
-.title{
-    font-size: 4rem;
-    margin-top:14rem;
-    margin-left: 20rem;
+.title7{
+    font-size: 2.5rem;
+    margin-top:10rem;
+    margin-left: 17rem;
     color: #3B1B0E;
     font-family: 'Comfortaa', cursive;
+    width: 300px;
 }
 
-.sub-title{
-    margin-left: 20.4rem;
+.sub-title7{
+    margin-left: 17rem;
     color: #3B1B0E;
     font-family: 'Comfortaa', cursive;
 }

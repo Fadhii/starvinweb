@@ -20,12 +20,12 @@ export default function Home() {
   return (
 
     <>
-      <div className="main-div">
-          <h1 className="title">Welcome {location.state.id}, to our restaurant</h1>
-          <h3 className="sub-title">Select option from below.</h3>
-          <div className="buttons">
-            <button className="button" onClick={navigateToReserv}>Reserve your seat now</button>
-            <button className="button" onClick={navigateToMenu}>View Menu</button>
+      <div className="main-div7">
+          <h1 className="title7">Welcome {location.state.id}, to our restaurant</h1>
+          <h3 className="sub-title7">Select option from below.</h3>
+          <div className="buttons7">
+            <button className="button7" onClick={navigateToReserv}>Reserve your seat now</button>
+            <button className="button7" onClick={navigateToMenu}>View Menu</button>
           </div>
       </div>
     </>

@@ -21,7 +21,7 @@ app.post("/login", async(req,res) =>{
 
     try {
         const check = await collection.findOne({email:email});
-
+   
         if(check){
             res.json("exist");
         }
@@ -34,11 +34,12 @@ app.post("/login", async(req,res) =>{
 })
 
 app.post("/signup", async(req,res) =>{
-    const{email,password} = req.body;
+    const{email,password,userName} = req.body;
 
     const data = {
         email:email,
-        password:password
+        password:password,
+        name: userName
     }
     try {
         const check = await collection.findOne({email:email});

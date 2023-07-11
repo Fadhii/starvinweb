@@ -1,6 +1,6 @@
 import React from "react";
 import "./SideNav.css";
-import { useLocation, Link} from "react-router-dom";
+import { Link} from "react-router-dom";
 import { NavbarData } from "./NavbarData";
 
 export default function SideNav() {
@@ -25,7 +25,7 @@ export default function SideNav() {
         })}
         </div>
 
-        <p className="copyright">Write something here</p>
+        <p className="copyright">© Star'vin</p>
       </div>
     </>
     

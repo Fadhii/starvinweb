@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios'; // Import axios for making API requests
 import '../css/Reservation.css';
 
 function Reservation() {
@@ -9,25 +10,38 @@ function Reservation() {
   const [time, setTime] = useState('');
   const [guests, setGuests] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Perform submission logic here, e.g., send reservation details to server
+    try {
+      // Send reservation details to the server
+      await axios.post('http://localhost:4578/reservations', {
+        name,
+        email,
+        phone,
+        date,
+        time,
+        guests,
+      }).then(()=>{
+        alert("We will contact you soon regarding your reservation");
+      });
 
-    // Reset form fields after submission
-    setName('');
-    setEmail('');
-    setPhone('');
-    setDate('');
-    setTime('');
-    setGuests('');
+      // Reset form fields after successful submission
+      setName('');
+      setEmail('');
+      setPhone('');
+      setDate('');
+      setTime('');
+      setGuests('');
+    } catch (error) {
+      console.log(error);
+      // Handle error case if the request fails
+    }
   };
 
   return (
     <div className='main-div4'>
-        
-            
-            <form onSubmit={handleSubmit} className='form'>
+      <form action='POST' className='form'>
         <div>
           <label>Name:</label>
           <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
@@ -52,12 +66,9 @@ function Reservation() {
           <label>Number of Guests:</label>
           <input type="number" min="1" value={guests} onChange={(e) => setGuests(e.target.value)} required />
         </div>
-        
+        <button type="submit" onClick={handleSubmit} className='button2'>Confirm Reservation</button>
       </form>
-      <button className='button2'>Confirm Reservation</button>
-        
-
-        <div class="image"></div>
+      <div className="image"></div>
     </div>
   );
 }

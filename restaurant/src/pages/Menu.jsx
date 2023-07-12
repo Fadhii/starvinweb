@@ -3,8 +3,6 @@ import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import "../css/Menu.css";
 import { FaSearch } from "react-icons/fa";
 
-
-
 const Menu = () => {
   const menu = [
     {
@@ -128,16 +126,15 @@ const Menu = () => {
     <div className="bdy">
       <div style={{ margin: "50px" }}>
         <Container>
-        <div className="search-bar">
-  <input
-    type="text"
-    value={searchTerm}
-    onChange={(e) => setSearchTerm(e.target.value)}
-    placeholder="Search by title"/>
-    <FaSearch className="search-icon" />
-  
-  
-</div>
+          <div className="search-bar">
+            <input
+              type="text"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              placeholder="Search by title"
+            />
+            <FaSearch className="search-icon" />
+          </div>
 
           <Row>
             {filteredMenu.slice(index, index + 6).map((e) => (
@@ -177,7 +174,7 @@ const Menu = () => {
             </Button>
           </div>
 
-          <h2>Cart:</h2>
+          <h2 className="cart-title">Cart:</h2>
           <div className="cart">
             <ul>
               {cart.map((item) => (

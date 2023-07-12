@@ -14,13 +14,17 @@ body {
 
 
     right: 0px;
-
+    min-height: 100vh;
 
     background-image: url(https://www.riveroaksestates.org/wp-content/uploads/2014/08/Wooden-background-texture-pattern-images-for-website-HD-template-PSD-free-download.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     z-index: 0;
+  }
+
+  .cart-title{
+    color: white;
   }
   
   .grad {
@@ -211,7 +215,7 @@ body {
   .search-bar {
     position:relative;
     display:flex;
-    align-items: center;
+    justify-content: flex-end;
   }
   
   .search-bar input {
@@ -220,6 +224,7 @@ body {
     border-radius: 4px;
     outline: none;
     font-size: 16px;
+    margin-right:35px;
   }
   
   .search-bar input::placeholder {
@@ -231,13 +236,14 @@ body {
     right: 10px;
     color: #999;
     pointer-events: none;
+    
   }
 
   
   .search-icon {
     position: absolute;
-    top: 50%;
-    right: 10px;
+    top: 45%;
+    right: 45px;
     transform: translateY(-50%);
     font-size: 1.2rem;
     color: #777;

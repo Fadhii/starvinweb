@@ -30,7 +30,7 @@
     background-image: url("../images/homeBg.jpg");
     margin-left: auto;
     height: 100vh;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;

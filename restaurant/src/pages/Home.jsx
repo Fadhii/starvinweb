@@ -21,7 +21,7 @@ export default function Home() {
     <>
       <div className="main-div">
           <h1 className="title">Star'vin?</h1>
-          <h3 className="sub-title">Your in the right place</h3>
+          <h3 className="sub-title">You're in the right place</h3>
           <div className="buttons">
             <button className="button" onClick={navigateToReserv}>Reserve your seat now</button>
             <button className="button" onClick={navigateToMenu}>View Menu</button>
